@@ -5,4 +5,29 @@
 // [1, 2, 3, 6, 2] -> 0
 // [10, 11, 12, 13, 14] -> 5
 
+int[] limits = {-1000, 1001};
 
+int[] CreateArrayOfRandNumbs(int arrayLength, int[] limits)
+{
+    int[] array = new int[arrayLength];
+    for (int i = 0; i < array.Length; i++)
+    {
+        array[i] = new Random().Next(limits[0], limits[1]);
+    }
+
+    return array;
+}
+
+int[] array = CreateArrayOfRandNumbs(123, limits);
+int count = 0;
+for(int i = 0; i < array.Length; i++)
+{
+    if(array[i] >= 10 && array[i] <= 99)
+    {
+        count++;
+        Console.Write($"{array[i]} ");
+    }
+}
+Console.WriteLine();
+
+Console.WriteLine($"Total: {count} times");
