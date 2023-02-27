@@ -23,7 +23,7 @@ int[] CreateArrayOfRandNumbs(int arrayLength, int[] limits)
 int[] array = CreateArrayOfRandNumbs(lengthOfArray, limits);
 for (int i = 0; i < array.Length; i++)
 {
-    if(array[i] % 2 != 0)
+    if(array[i] % 2 == 0)
         count++;
 }
 
