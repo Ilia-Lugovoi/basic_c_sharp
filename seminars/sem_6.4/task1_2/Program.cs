@@ -1,20 +1,24 @@
 ﻿// Задача 40: Напишите программу, которая принимает на вход три числа и проверяет, может ли существовать треугольник с сторонами такой длины.
+
 // Теорема о неравенстве треугольника: каждая сторона треугольника меньше суммы двух других сторон.
 
-// Задача 42: Напишите программу, которая будет преобразовывать десятичное число в двоичное.
+Console.WriteLine("Examination of true triangle!");
 
-// 45 -> 101101
-// 3  -> 11
-// 2  -> 10
+Console.Write("Write side a: ");
+int a = Convert.ToInt32(Console.ReadLine());
 
-Console.Write("Write numb pls: ");
-int numb = Convert.ToInt32(Console.ReadLine());
-string numbs = string.Empty;
+Console.Write("Write side b: ");
+int b = Convert.ToInt32(Console.ReadLine());
 
-while(numb > 0)
+Console.Write("Write side c: ");
+int c = Convert.ToInt32(Console.ReadLine());
+
+
+if(a + b > c && a + c > b && b + c > a)
 {
-    numbs = numb % 2 + numbs;
-    numb = numb / 2;
+    Console.WriteLine("Exam for triangle was passed!!!)");
 }
-
-Console.WriteLine(numbs);
+else
+{
+    Console.WriteLine("Exam for triangle was failed!!!(( ");
+}
