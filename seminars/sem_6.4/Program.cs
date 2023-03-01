@@ -58,3 +58,49 @@ else
 {
     Console.WriteLine("Exam for triangle was failed!!!(( ");
 }
+
+// Задача 42: Напишите программу, которая будет преобразовывать десятичное число в двоичное.
+
+// 45 -> 101101
+// 3  -> 11
+// 2  -> 10
+
+Console.Write("Write numb pls: ");
+int numb = Convert.ToInt32(Console.ReadLine());
+string numbs = string.Empty;
+
+while(numb > 0)
+{
+    numbs = numb % 2 + numbs;
+    numb = numb / 2;
+}
+
+Console.WriteLine(numbs);
+
+//
+// static void Task02()
+// {
+//     int number = PromptInput("Введите число: ");
+//     int[] array = new int[Count(number)];
+
+//     static int[] ReverseArray(int[] array)
+//     {
+
+//     }
+
+//     static void PrintArray(int[] array)
+//     {
+
+//     }
+
+//     int Count(int count)
+//     {
+    
+//     }
+
+//     int[] GetNumber(int[] array, int number)
+//     {
+
+//     }
+
+// }
