@@ -1,37 +1,22 @@
-﻿// Задача 39: Напишите программу, которая перевернёт одномерный массив
-// [1 2 3 4 5] -> [5 4 3 2 1]
-// [6 7 3 6] -> [6 3 7 6]
+﻿// Задача 40: Программа проверки на существоание треугольника 
 
-Console.Write("Enter how many elements of the array you want to create: ");
-int lengthOfArray = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Examination of true triangle!");
 
-int[] limits = {1, 10};
-int[] CreateArrayOfRandNumbs(int arrayLength, int[] limits)
+Console.Write("Write side a: ");
+int a = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Write side b: ");
+int b = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Write side c: ");
+int c = Convert.ToInt32(Console.ReadLine());
+
+
+if(a + b > c && a + c > b && b + c > a)
 {
-    int[] array = new int[arrayLength];
-    for (int i = 0; i < array.Length; i++)
-    {
-        array[i] = new Random().Next(limits[0], limits[1]);
-        Console.Write($"{array[i]} ");
-    }
-
-    Console.WriteLine();
-    return array;
+    Console.WriteLine("Exam for triangle was passed!!!)");
 }
-
-int[] array = CreateArrayOfRandNumbs(lengthOfArray, limits);
-
-int[] RevertArray(int[] array)
+else
 {
-    for (int i = 0; i < array.Length / 2; i++)
-    {
-        int tmp = array[i];
-        array[i] = array[array.Length - 1 - i];
-        array[array.Length - 1 - i] = tmp;
-    }
-
-    return array;
+    Console.WriteLine("Exam for triangle was failed!!!(( ");
 }
-
-int[] revAr = RevertArray(array);
-Console.WriteLine(String.Join(" ", array));
