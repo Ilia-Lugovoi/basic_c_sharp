@@ -11,25 +11,22 @@ int IntNumberRequest(string text)
     return Convert.ToInt32(Console.ReadLine());
 }
 
-double DoubNumberRequest(string text)
-{
-    Console.Write(text);
-    return Convert.ToDouble(Console.ReadLine());
-}
-
-void Main(string[] args)
+int CountPositiveNumbers()
 {
     int m = IntNumberRequest("Enter number of numbers: ");
     int count = 0;
-    for (int i = 0; i <= m; i++)
+    for (int i = 1; i <= m; i++)
     {
-        double num = DoubNumberRequest($"Enter number {i}: ");
+        int num = IntNumberRequest($"Enter number {i}: ");
+        if(num > 0)
+        {
+            count++;
+        }
     }
 
-    if(num > 0)
-    {
-        count++;
-    }
+    return count;
 }
+
+int count = CountPositiveNumbers();
 
 Console.WriteLine($"Numbers greater than zero: {count}");

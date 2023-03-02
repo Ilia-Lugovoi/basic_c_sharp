@@ -105,6 +105,29 @@
 
 // // }
 
+// Числа Фибаначи
+
+int NumberRequest(string text)
+{
+    Console.Write(text);
+    return Convert.ToInt32(Console.ReadLine());
+}
+
+int number = NumberRequest("Enter number pls: ");
+
+int n1 = 0;
+int n2 = 1;
+int sum = 0;
+for (int i = 0; i < number; i++)
+{
+    sum = n1 + n2;
+    Console.Write($"{sum} ");
+    n2 = n1;
+    n1 = sum;
+}
+
+Console.WriteLine();
+
 // // Задача 45: Напишите программу, которая будет создавать копию заданного массива с помощью поэлементного копирования.
 
 // Console.Write("Enter how many elements of the array you want to create: ");
