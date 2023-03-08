@@ -5,28 +5,44 @@
 
 // 1, -7, 567, 89, 223-> 3
 
-int IntNumberRequest(string text)
+Console.Write("Enter numbers to count positive: ");
+string[] msg = Console.ReadLine().Split(" ");
+
+int n = 0;
+int count = 0;
+
+for (int i = 0; i < msg.Length; i++)
 {
-    Console.Write(text);
-    return Convert.ToInt32(Console.ReadLine());
+    n = Convert.ToInt32(msg[i]);
+    if(n > 0)
+        count++;
 }
 
-int CountPositiveNumbers()
-{
-    int m = IntNumberRequest("Enter number of numbers: ");
-    int count = 0;
-    for (int i = 1; i <= m; i++)
-    {
-        int num = IntNumberRequest($"Enter number {i}: ");
-        if(num > 0)
-        {
-            count++;
-        }
-    }
+Console.WriteLine(count);
 
-    return count;
-}
+// Through the loop
+// int IntNumberRequest(string text)
+// {
+//     Console.Write(text);
+//     return Convert.ToInt32(Console.ReadLine());
+// }
 
-int count = CountPositiveNumbers();
+// int CountPositiveNumbers()
+// {
+//     int m = IntNumberRequest("Enter number of numbers: ");
+//     int count = 0;
+//     for (int i = 1; i <= m; i++)
+//     {
+//         int num = IntNumberRequest($"Enter number {i}: ");
+//         if(num > 0)
+//         {
+//             count++;
+//         }
+//     }
 
-Console.WriteLine($"Numbers greater than zero: {count}");
+//     return count;
+// }
+
+// int count = CountPositiveNumbers();
+
+// Console.WriteLine($"Numbers greater than zero: {count}");
