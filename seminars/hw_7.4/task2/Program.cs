@@ -7,8 +7,8 @@
 
 // 17 -> такого числа в массиве нет
 
-int rows = Convert.ToInt32(Console.ReadLine());
-int columns = Convert.ToInt32(Console.ReadLine());
+int rows = 3;
+int columns = 4;
 int[] limits = {-10, 11};
 
 int[,] CreateTwoDimArrayOfRandNumbs(int rows, int columns, int[] limits)
@@ -30,17 +30,41 @@ int[,] CreateTwoDimArrayOfRandNumbs(int rows, int columns, int[] limits)
 
 int[,] array = CreateTwoDimArrayOfRandNumbs(rows, columns, limits);
 
-Console.Write("Enter row of your number: ");
-int m = Convert.ToInt32(Console.ReadLine());
+// First Version
 
-Console.Write("Enter column of your number: ");
-int n = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Enter row of your number: ");
+// int m = Convert.ToInt32(Console.ReadLine()) - 1;
 
-if(array[m, n] )
-{
-    Console.WriteLine(array[m,n]);
-}
-else
-{
-    Console.WriteLine("No such element");
-}
+// Console.Write("Enter column of your number: ");
+// int n = Convert.ToInt32(Console.ReadLine()) - 1;
+
+// if(m <= rows)
+// {
+//     Console.WriteLine(array[m,n]);
+// }
+// else
+// {
+//     Console.WriteLine("No such element");
+// }
+
+// m = 0;
+// n = 0;
+
+// Second Version
+
+// Console.Write("Enter desired number: ");
+// int number = Convert.ToInt32(Console.ReadLine());
+// int count = 0;
+
+// foreach (int numb in array)
+// {
+//     if(numb == number)
+//     {
+//         count++;
+//         Console.WriteLine($"Your number {number} has been found!");
+//     }
+// }
+// if(count == 0)
+// {
+//     Console.WriteLine("There is no such number in the array");
+// }
