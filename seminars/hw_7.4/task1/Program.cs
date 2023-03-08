@@ -6,12 +6,12 @@
 // 8 7,8 -7,1 9
 
 Console.Write("Enter how many rows do you want: ");
-int rows = Convert.ToInt32(Console.ReadLine());
+int m = Convert.ToInt32(Console.ReadLine());
 
 Console.Write("Enter how many columns do you want: ");
-int columns = Convert.ToInt32(Console.ReadLine());
+int n = Convert.ToInt32(Console.ReadLine());
 
-int[] limits = {0, 101};
+int[] limits = {-10, 11};
 
 int[,] CreateTwoDimArrayOfRandNumbs(int rows, int columns, int[] limits)
 {
@@ -30,4 +30,4 @@ int[,] CreateTwoDimArrayOfRandNumbs(int rows, int columns, int[] limits)
     return twoDimArray;
 }
 
-int[,] array = CreateTwoDimArrayOfRandNumbs(rows, columns, limits);
+int[,] array = CreateTwoDimArrayOfRandNumbs(m, n, limits);
