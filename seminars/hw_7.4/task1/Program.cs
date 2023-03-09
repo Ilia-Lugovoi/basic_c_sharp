@@ -11,16 +11,17 @@ int m = Convert.ToInt32(Console.ReadLine());
 Console.Write("Enter how many columns do you want: ");
 int n = Convert.ToInt32(Console.ReadLine());
 
-int[] limits = {-10, 11};
+int[] limits = {-100, 101};
 
-int[,] CreateTwoDimArrayOfRandNumbs(int rows, int columns, int[] limits)
+double[,] CreateTwoDimArrayOfRandNumbs(int rows, int columns, int[] limits)
 {
-    int[,] twoDimArray = new int[rows, columns];
+    double[,] twoDimArray = new double[rows, columns];
     for (int i = 0; i < rows; i++)
     {
         for (int j = 0; j < columns; j++)
         {
             twoDimArray[i, j] = new Random().Next(limits[0], limits[1]);
+            twoDimArray[i, j] = twoDimArray[i, j] / 10;
             Console.Write($"{twoDimArray[i, j]} ");
         }
         Console.WriteLine();
@@ -30,4 +31,4 @@ int[,] CreateTwoDimArrayOfRandNumbs(int rows, int columns, int[] limits)
     return twoDimArray;
 }
 
-int[,] array = CreateTwoDimArrayOfRandNumbs(m, n, limits);
+double[,] array = CreateTwoDimArrayOfRandNumbs(m, n, limits);
