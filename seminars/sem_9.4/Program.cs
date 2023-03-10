@@ -56,3 +56,27 @@
 
 // // }
 
+// // Задача 67: Напишите программу, которая будет принимать на вход число
+// // и возвращать сумму его цифр.
+// // 453 -> 12
+// // 45 -> 9
+
+// Console.Write("Enter number to find sum of him digits: ");
+// int number = Convert.ToInt32(Console.ReadLine());
+// int sum = 0;
+// int n = 0;
+// int SumDigitsOfNumber(int number)
+// {
+//     if(number == 0)
+//     {
+//         return sum;
+//     }
+
+//     n = number % 10;
+//     sum += n;
+//     return SumDigitsOfNumber(number / 10);
+
+// }
+
+// sum = SumDigitsOfNumber(number);
+// Console.WriteLine(sum);
