@@ -227,3 +227,102 @@
 // // Вывели частотный словарь
 
 // PrintCounts(array1D);
+
+// // Задача 59: Задайте двумерный массив из целых чисел
+// // Напишите программу, которая удалит строку и столбец,
+// // на пересечении которых расположен наименьший элемент массива
+
+// Console.Write("Enter how many rows do you want: ");
+// int rows = Convert.ToInt32(Console.ReadLine());
+
+// Console.Write("Enter how many columns do you want: ");
+// int columns = Convert.ToInt32(Console.ReadLine());
+
+// int[] limits = {-10, 11};
+// int[,] CreateTwoDimArrayOfRandNumbs(int rows, int columns, int[] limits)
+// {
+//     int[,] twoDimArray = new int[rows, columns];
+//     for (int i = 0; i < rows; i++)
+//     {
+//         for (int j = 0; j < columns; j++)
+//         {
+//             twoDimArray[i, j] = new Random().Next(limits[0], limits[1]);
+//             Console.Write($"{twoDimArray[i, j]} ");
+//         }
+//         Console.WriteLine();
+//     }
+
+//     Console.WriteLine();
+//     return twoDimArray;
+// }
+// int[,] array2D = CreateTwoDimArrayOfRandNumbs(rows, columns, limits);
+// // Create TwoDim Array
+
+// int minVal = array2D[0,0];
+// int rwMin = 0; // row of min
+// int clMin = 0; // column of min
+// int rwMin2 = -1;
+// int clMin2 = -1;
+// int rwMin3 = -1;
+// int clMin3 = -1;
+// int count = 1;
+// for (int i1 = 0; i1 < array2D.GetLength(0); i1++)
+// {
+//     for (int j1 = 0; j1 < array2D.GetLength(1); j1++)
+//     {
+//         if (array2D[i1, j1] <= minVal)
+//         {
+//             if(minVal == array2D[i1, j1])
+//             {
+//                 count++;
+//             }
+//             else if(array2D[i1,j1] != minVal)
+//             {
+//                 count = 1;
+//                 rwMin = i1;
+//                 clMin = j1;
+//                 rwMin2 = -1;
+//                 clMin2 = -1;
+//                 rwMin3 = -1;
+//                 clMin3 = -1;
+//             }
+//             minVal = array2D[i1, j1];
+//             if(count == 2)
+//             {
+//                 rwMin2 = i1;
+//                 clMin2 = j1;
+//             }
+//             if(count == 3)
+//             {
+//                 rwMin3 = i1;
+//                 clMin3 = j1;
+//             }
+//         }
+//     }
+// }
+// // find mins & indexs of mins
+// Console.WriteLine($"{minVal} and the indexs: {rwMin} {clMin} {rwMin2} {clMin2} {rwMin3} {clMin3}");
+
+
+// int[,] new2DArray = new int[rows - count, columns - count];
+// int n = new2DArray.GetLength(0) * new2DArray.GetLength(1);
+// // Create new array
+// int i2 = -1;
+// int j2 = -1;
+
+// for (int i = 0; i < array2D.GetLength(0); i++)
+// {
+//     for (int j = 0; j < array2D.GetLength(1); j++)
+//     {
+//         if(i != rwMin && j != clMin && i != rwMin2 && j != clMin2 && i != rwMin3 && j != clMin3)
+//         {
+//             new2DArray[i2,j2] = array2D[i,j];
+//             Console.Write($"{new2DArray[i2,j2]} ");
+//             i2++;
+//             j2++;
+//         }
+        
+//     }
+//     Console.WriteLine();
+// }
+// // Filling a new array
